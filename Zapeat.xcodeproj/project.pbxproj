@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C2B0DE315FAB3E500BB3CC6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B0DE215FAB3E500BB3CC6 /* WebViewController.m */; };
+		9C2B0DEE15FACA4700BB3CC6 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B0DED15FACA4700BB3CC6 /* ic_launcher.png */; };
+		9C2B0DF015FACB3F00BB3CC6 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B0DEF15FACB3F00BB3CC6 /* screen.png */; };
+		9C2B0DF215FACB5900BB3CC6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B0DF115FACB5900BB3CC6 /* Default.png */; };
+		9C2B0DF515FAE85500BB3CC6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2B0DF415FAE85500BB3CC6 /* libsqlite3.dylib */; };
+		9C2B0DF815FAE91100BB3CC6 /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B0DF715FAE91100BB3CC6 /* DBUtil.m */; };
+		9C2B0DFB15FAEB0500BB3CC6 /* PromocaoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B0DFA15FAEB0500BB3CC6 /* PromocaoDAO.m */; };
+		9C48C8B115F6D79000BA95FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C48C8B015F6D79000BA95FC /* UIKit.framework */; };
+		9C48C8B315F6D79000BA95FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C48C8B215F6D79000BA95FC /* Foundation.framework */; };
+		9C48C8B515F6D79000BA95FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C48C8B415F6D79000BA95FC /* CoreGraphics.framework */; };
+		9C48C8BB15F6D79000BA95FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C48C8B915F6D79000BA95FC /* InfoPlist.strings */; };
+		9C48C8BD15F6D79000BA95FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8BC15F6D79000BA95FC /* main.m */; };
+		9C48C8C115F6D79000BA95FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8C015F6D79000BA95FC /* AppDelegate.m */; };
+		9C48C8CD15F6D79000BA95FC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C48C8CB15F6D79000BA95FC /* MainStoryboard.storyboard */; };
+		9C48C8D515F6D8C400BA95FC /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8D415F6D8C400BA95FC /* Usuario.m */; };
+		9C48C8D915F6D99E00BA95FC /* Promocao.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8D815F6D99E00BA95FC /* Promocao.m */; };
+		9C48C8DC15F6E82800BA95FC /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8DB15F6E82800BA95FC /* LoginController.m */; };
+		9C48C90C15F6F60D00BA95FC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C48C90B15F6F60D00BA95FC /* CoreLocation.framework */; };
+		9C6516B815FBAFAA00EAF22D /* FMDatabase.h in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516B415FBAD9D00EAF22D /* FMDatabase.h */; };
+		9C6516B915FBAFAA00EAF22D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516B515FBAD9D00EAF22D /* FMDatabase.m */; };
+		9C6516BA15FBAFAA00EAF22D /* FMResultSet.h in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516B615FBAD9D00EAF22D /* FMResultSet.h */; };
+		9C6516BB15FBAFAA00EAF22D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516B715FBAD9D00EAF22D /* FMResultSet.m */; };
+		9C6516C415FBC98900EAF22D /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516C315FBC98900EAF22D /* CoreLocationController.m */; };
+		9C6516C915FBF3F700EAF22D /* ZapeatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516C815FBF3F700EAF22D /* ZapeatUtil.m */; };
+		9C6516CC15FBF52100EAF22D /* ControleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516CB15FBF52100EAF22D /* ControleDAO.m */; };
+		9C6516D115FBF89B00EAF22D /* UsuarioService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D015FBF89B00EAF22D /* UsuarioService.m */; };
+		9C6516D415FBF8DC00EAF22D /* PromocaoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D315FBF8DC00EAF22D /* PromocaoService.m */; };
+		9C6516D715FBFA5000EAF22D /* ControleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D615FBFA5000EAF22D /* ControleService.m */; };
+		9CDDB6F115FC1AAC00D5492C /* promocoes.db in Resources */ = {isa = PBXBuildFile; fileRef = 9CDDB6F015FC1AAC00D5492C /* promocoes.db */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C2B0DE115FAB3E500BB3CC6 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		9C2B0DE215FAB3E500BB3CC6 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		9C2B0DED15FACA4700BB3CC6 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
+		9C2B0DEF15FACB3F00BB3CC6 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
+		9C2B0DF115FACB5900BB3CC6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9C2B0DF415FAE85500BB3CC6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		9C2B0DF615FAE91100BB3CC6 /* DBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUtil.h; sourceTree = "<group>"; };
+		9C2B0DF715FAE91100BB3CC6 /* DBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtil.m; sourceTree = "<group>"; };
+		9C2B0DF915FAEB0500BB3CC6 /* PromocaoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocaoDAO.h; sourceTree = "<group>"; };
+		9C2B0DFA15FAEB0500BB3CC6 /* PromocaoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocaoDAO.m; sourceTree = "<group>"; };
+		9C48C8AC15F6D79000BA95FC /* Zapeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zapeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C48C8B015F6D79000BA95FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9C48C8B215F6D79000BA95FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C48C8B415F6D79000BA95FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9C48C8B815F6D79000BA95FC /* Zapeat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zapeat-Info.plist"; sourceTree = "<group>"; };
+		9C48C8BA15F6D79000BA95FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C48C8BC15F6D79000BA95FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C48C8BE15F6D79000BA95FC /* Zapeat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zapeat-Prefix.pch"; sourceTree = "<group>"; };
+		9C48C8BF15F6D79000BA95FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C48C8C015F6D79000BA95FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C48C8CC15F6D79000BA95FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9C48C8D315F6D8C400BA95FC /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
+		9C48C8D415F6D8C400BA95FC /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
+		9C48C8D715F6D99E00BA95FC /* Promocao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Promocao.h; sourceTree = "<group>"; };
+		9C48C8D815F6D99E00BA95FC /* Promocao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Promocao.m; sourceTree = "<group>"; };
+		9C48C8DA15F6E82800BA95FC /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		9C48C8DB15F6E82800BA95FC /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		9C48C90B15F6F60D00BA95FC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9C6516B415FBAD9D00EAF22D /* FMDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		9C6516B515FBAD9D00EAF22D /* FMDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		9C6516B615FBAD9D00EAF22D /* FMResultSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		9C6516B715FBAD9D00EAF22D /* FMResultSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		9C6516C215FBC98900EAF22D /* CoreLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationController.h; sourceTree = "<group>"; };
+		9C6516C315FBC98900EAF22D /* CoreLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationController.m; sourceTree = "<group>"; };
+		9C6516C715FBF3F700EAF22D /* ZapeatUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZapeatUtil.h; sourceTree = "<group>"; };
+		9C6516C815FBF3F700EAF22D /* ZapeatUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZapeatUtil.m; sourceTree = "<group>"; };
+		9C6516CA15FBF52100EAF22D /* ControleDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControleDAO.h; sourceTree = "<group>"; };
+		9C6516CB15FBF52100EAF22D /* ControleDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControleDAO.m; sourceTree = "<group>"; };
+		9C6516CF15FBF89B00EAF22D /* UsuarioService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuarioService.h; sourceTree = "<group>"; };
+		9C6516D015FBF89B00EAF22D /* UsuarioService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuarioService.m; sourceTree = "<group>"; };
+		9C6516D215FBF8DC00EAF22D /* PromocaoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocaoService.h; sourceTree = "<group>"; };
+		9C6516D315FBF8DC00EAF22D /* PromocaoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocaoService.m; sourceTree = "<group>"; };
+		9C6516D515FBFA5000EAF22D /* ControleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControleService.h; sourceTree = "<group>"; };
+		9C6516D615FBFA5000EAF22D /* ControleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControleService.m; sourceTree = "<group>"; };
+		9CDDB6F015FC1AAC00D5492C /* promocoes.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = promocoes.db; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C48C8A915F6D79000BA95FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C2B0DF515FAE85500BB3CC6 /* libsqlite3.dylib in Frameworks */,
+				9C48C90C15F6F60D00BA95FC /* CoreLocation.framework in Frameworks */,
+				9C48C8B115F6D79000BA95FC /* UIKit.framework in Frameworks */,
+				9C48C8B315F6D79000BA95FC /* Foundation.framework in Frameworks */,
+				9C48C8B515F6D79000BA95FC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C2B0DE515FAC3D200BB3CC6 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				9C6516C715FBF3F700EAF22D /* ZapeatUtil.h */,
+				9C6516C815FBF3F700EAF22D /* ZapeatUtil.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		9C2B0DEC15FACA2A00BB3CC6 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C2B0DEF15FACB3F00BB3CC6 /* screen.png */,
+				9C2B0DED15FACA4700BB3CC6 /* ic_launcher.png */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		9C2B0DF315FAE76800BB3CC6 /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				9C2B0DF615FAE91100BB3CC6 /* DBUtil.h */,
+				9C2B0DF715FAE91100BB3CC6 /* DBUtil.m */,
+				9C2B0DF915FAEB0500BB3CC6 /* PromocaoDAO.h */,
+				9C2B0DFA15FAEB0500BB3CC6 /* PromocaoDAO.m */,
+				9C6516CA15FBF52100EAF22D /* ControleDAO.h */,
+				9C6516CB15FBF52100EAF22D /* ControleDAO.m */,
+			);
+			name = dao;
+			sourceTree = "<group>";
+		};
+		9C48C8A115F6D79000BA95FC = {
+			isa = PBXGroup;
+			children = (
+				9C2B0DF415FAE85500BB3CC6 /* libsqlite3.dylib */,
+				9C2B0DF115FACB5900BB3CC6 /* Default.png */,
+				9C48C90B15F6F60D00BA95FC /* CoreLocation.framework */,
+				9C48C8B615F6D79000BA95FC /* Zapeat */,
+				9C48C8AF15F6D79000BA95FC /* Frameworks */,
+				9C48C8AD15F6D79000BA95FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C48C8AD15F6D79000BA95FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C48C8AC15F6D79000BA95FC /* Zapeat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C48C8AF15F6D79000BA95FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C48C8B015F6D79000BA95FC /* UIKit.framework */,
+				9C48C8B215F6D79000BA95FC /* Foundation.framework */,
+				9C48C8B415F6D79000BA95FC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C48C8B615F6D79000BA95FC /* Zapeat */ = {
+			isa = PBXGroup;
+			children = (
+				9C6516CE15FBF89000EAF22D /* service */,
+				9C6516BE15FBC8F900EAF22D /* delegate */,
+				9C6516B315FBAD0000EAF22D /* fmdb */,
+				9C2B0DF315FAE76800BB3CC6 /* dao */,
+				9C2B0DEC15FACA2A00BB3CC6 /* resources */,
+				9C2B0DE515FAC3D200BB3CC6 /* util */,
+				9C48C90815F6EFDB00BA95FC /* controller */,
+				9C48C8D615F6D98F00BA95FC /* model */,
+				9C48C8B715F6D79000BA95FC /* Supporting Files */,
+			);
+			path = Zapeat;
+			sourceTree = "<group>";
+		};
+		9C48C8B715F6D79000BA95FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CDDB6F015FC1AAC00D5492C /* promocoes.db */,
+				9C48C8B815F6D79000BA95FC /* Zapeat-Info.plist */,
+				9C48C8B915F6D79000BA95FC /* InfoPlist.strings */,
+				9C48C8BC15F6D79000BA95FC /* main.m */,
+				9C48C8BE15F6D79000BA95FC /* Zapeat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C48C8D615F6D98F00BA95FC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9C48C8D315F6D8C400BA95FC /* Usuario.h */,
+				9C48C8D415F6D8C400BA95FC /* Usuario.m */,
+				9C48C8D715F6D99E00BA95FC /* Promocao.h */,
+				9C48C8D815F6D99E00BA95FC /* Promocao.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		9C48C90815F6EFDB00BA95FC /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C48C8CB15F6D79000BA95FC /* MainStoryboard.storyboard */,
+				9C48C8DA15F6E82800BA95FC /* LoginController.h */,
+				9C48C8DB15F6E82800BA95FC /* LoginController.m */,
+				9C2B0DE115FAB3E500BB3CC6 /* WebViewController.h */,
+				9C2B0DE215FAB3E500BB3CC6 /* WebViewController.m */,
+				9C6516C215FBC98900EAF22D /* CoreLocationController.h */,
+				9C6516C315FBC98900EAF22D /* CoreLocationController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		9C6516B315FBAD0000EAF22D /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				9C6516B415FBAD9D00EAF22D /* FMDatabase.h */,
+				9C6516B515FBAD9D00EAF22D /* FMDatabase.m */,
+				9C6516B615FBAD9D00EAF22D /* FMResultSet.h */,
+				9C6516B715FBAD9D00EAF22D /* FMResultSet.m */,
+			);
+			name = fmdb;
+			sourceTree = "<group>";
+		};
+		9C6516BE15FBC8F900EAF22D /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9C48C8BF15F6D79000BA95FC /* AppDelegate.h */,
+				9C48C8C015F6D79000BA95FC /* AppDelegate.m */,
+			);
+			name = delegate;
+			sourceTree = "<group>";
+		};
+		9C6516CE15FBF89000EAF22D /* service */ = {
+			isa = PBXGroup;
+			children = (
+				9C6516CF15FBF89B00EAF22D /* UsuarioService.h */,
+				9C6516D015FBF89B00EAF22D /* UsuarioService.m */,
+				9C6516D215FBF8DC00EAF22D /* PromocaoService.h */,
+				9C6516D315FBF8DC00EAF22D /* PromocaoService.m */,
+				9C6516D515FBFA5000EAF22D /* ControleService.h */,
+				9C6516D615FBFA5000EAF22D /* ControleService.m */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C48C8AB15F6D79000BA95FC /* Zapeat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C48C8D015F6D79000BA95FC /* Build configuration list for PBXNativeTarget "Zapeat" */;
+			buildPhases = (
+				9C48C8A815F6D79000BA95FC /* Sources */,
+				9C48C8A915F6D79000BA95FC /* Frameworks */,
+				9C48C8AA15F6D79000BA95FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zapeat;
+			productName = Zapeat;
+			productReference = 9C48C8AC15F6D79000BA95FC /* Zapeat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C48C8A315F6D79000BA95FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = TopSys;
+			};
+			buildConfigurationList = 9C48C8A615F6D79000BA95FC /* Build configuration list for PBXProject "Zapeat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9C48C8A115F6D79000BA95FC;
+			productRefGroup = 9C48C8AD15F6D79000BA95FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C48C8AB15F6D79000BA95FC /* Zapeat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C48C8AA15F6D79000BA95FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C48C8BB15F6D79000BA95FC /* InfoPlist.strings in Resources */,
+				9C48C8CD15F6D79000BA95FC /* MainStoryboard.storyboard in Resources */,
+				9C2B0DEE15FACA4700BB3CC6 /* ic_launcher.png in Resources */,
+				9C2B0DF015FACB3F00BB3CC6 /* screen.png in Resources */,
+				9C2B0DF215FACB5900BB3CC6 /* Default.png in Resources */,
+				9CDDB6F115FC1AAC00D5492C /* promocoes.db in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C48C8A815F6D79000BA95FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6516B815FBAFAA00EAF22D /* FMDatabase.h in Sources */,
+				9C6516B915FBAFAA00EAF22D /* FMDatabase.m in Sources */,
+				9C6516BA15FBAFAA00EAF22D /* FMResultSet.h in Sources */,
+				9C6516BB15FBAFAA00EAF22D /* FMResultSet.m in Sources */,
+				9C48C8BD15F6D79000BA95FC /* main.m in Sources */,
+				9C48C8C115F6D79000BA95FC /* AppDelegate.m in Sources */,
+				9C48C8D515F6D8C400BA95FC /* Usuario.m in Sources */,
+				9C48C8D915F6D99E00BA95FC /* Promocao.m in Sources */,
+				9C48C8DC15F6E82800BA95FC /* LoginController.m in Sources */,
+				9C2B0DE315FAB3E500BB3CC6 /* WebViewController.m in Sources */,
+				9C2B0DF815FAE91100BB3CC6 /* DBUtil.m in Sources */,
+				9C2B0DFB15FAEB0500BB3CC6 /* PromocaoDAO.m in Sources */,
+				9C6516C415FBC98900EAF22D /* CoreLocationController.m in Sources */,
+				9C6516C915FBF3F700EAF22D /* ZapeatUtil.m in Sources */,
+				9C6516CC15FBF52100EAF22D /* ControleDAO.m in Sources */,
+				9C6516D115FBF89B00EAF22D /* UsuarioService.m in Sources */,
+				9C6516D415FBF8DC00EAF22D /* PromocaoService.m in Sources */,
+				9C6516D715FBFA5000EAF22D /* ControleService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C48C8B915F6D79000BA95FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C48C8BA15F6D79000BA95FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C48C8CB15F6D79000BA95FC /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C48C8CC15F6D79000BA95FC /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C48C8CE15F6D79000BA95FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9C48C8CF15F6D79000BA95FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C48C8D115F6D79000BA95FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zapeat/Zapeat-Prefix.pch";
+				INFOPLIST_FILE = "Zapeat/Zapeat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9C48C8D215F6D79000BA95FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zapeat/Zapeat-Prefix.pch";
+				INFOPLIST_FILE = "Zapeat/Zapeat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C48C8A615F6D79000BA95FC /* Build configuration list for PBXProject "Zapeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C48C8CE15F6D79000BA95FC /* Debug */,
+				9C48C8CF15F6D79000BA95FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C48C8D015F6D79000BA95FC /* Build configuration list for PBXNativeTarget "Zapeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C48C8D115F6D79000BA95FC /* Debug */,
+				9C48C8D215F6D79000BA95FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C48C8A315F6D79000BA95FC /* Project object */;
+}
