@@ -33,6 +33,8 @@
         NSError* error;
         NSDictionary *resultados = [NSJSONSerialization JSONObjectWithData:jsonData
                                                                    options:NSJSONReadingMutableContainers error:&error];
+        
+        @try {
             
             if([[resultados objectForKey:@"logged"]boolValue]) {
             
@@ -52,10 +54,12 @@
                 [self showAlert:@"Falha ao autenticar" message:@"Login e/ou senha incorreto(s)."];
             }
         
-        }else {
+        } @catch (NSException *ex) {
          
             [self showAlert:@"Falha ao autenticar" message:@"Falha ao autenticar usuário, verifique sua conexão com a internet ou tente mais tarde."];
         }
+        
+    }
     
 }
 
