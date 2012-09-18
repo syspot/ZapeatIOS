@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CoreLocationController.h"
 #import "Promocao.h"
-@interface WebViewController : UIViewController  <CoreLocationControllerDelegate> {
+@interface WebViewController : UIViewController  <CoreLocationControllerDelegate,UIWebViewDelegate> {
     CoreLocationController *CLController;
 }
 

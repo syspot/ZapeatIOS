@@ -14,6 +14,8 @@
 @property(nonatomic,strong) NSString *descricao;
 @property(nonatomic,strong) NSString *precoOriginal;
 @property(nonatomic,strong) NSString *precoPromocional;
+@property(nonatomic,strong) NSString *inicio;
+@property(nonatomic,strong) NSString *fim;
 @property(nonatomic) double latitude;
 @property(nonatomic) double longitude;
 @property(nonatomic) long codigo;

@@ -10,13 +10,15 @@
 #import "Promocao.h"
 @implementation Usuario
 
-@synthesize login,senha,promocoes,codigo;
+@synthesize login,senha,promocoes,codigo,token;
 
 + (Usuario *) init : (NSDictionary *) dicionario{
     
     Usuario * user = [[Usuario alloc]init];
     
     [user setCodigo:[[dicionario objectForKey:@"id"] longValue]];
+    
+    [user setToken:[dicionario objectForKey:@"token"]];
     
     NSArray *itens = (NSArray *)[dicionario objectForKey:@"promocoes"];
 

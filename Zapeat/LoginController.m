@@ -11,6 +11,7 @@
 #import <KeyValueObjectMapping/DCKeyValueObjectMapping.h>
 #import "WebViewController.h"
 #import "UsuarioService.h"
+#import "ZapeatUtil.h"
 @interface LoginController ()
 
 @end
@@ -23,26 +24,31 @@
     
         
     if(self.validateEmptyFields) {
- 
-    
-        Usuario *usuario = [[Usuario alloc]init];
-        usuario.login = login.text;
-        usuario.senha = senha.text;
-        NSString *url = [NSString stringWithFormat:@"http://192.168.0.17:8080/TestAndroid/autenticar"];
-        NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
-        NSError* error;
-        NSDictionary *resultados = [NSJSONSerialization JSONObjectWithData:jsonData
-                                                                   options:NSJSONReadingMutableContainers error:&error];
-        
+  
         @try {
+
+            Usuario *usuario = [[Usuario alloc]init];
+            usuario.login = login.text;
+            usuario.senha = [ZapeatUtil md5:senha.text];
             
-            if([[resultados objectForKey:@"logged"]boolValue]) {
+            NSString *url = [NSString stringWithFormat:@"http://192.168.0.17:8080/ZapeatMobile/autenticarIOS?email=%@",usuario.login];
+           
+            NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
+            
+            NSError* error;
+            
+            NSDictionary *resultados = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                   options:NSJSONReadingMutableContainers error:&error];
+
+            if([[resultados objectForKey:@"logged"]boolValue] && [usuario.senha isEqualToString:[resultados objectForKey:@"key"]]) {
             
                 usuario = [Usuario init:resultados];
 
                 UsuarioService *service = [[UsuarioService alloc]init];
                 
                 [service initConfiguration:usuario];
+                NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+                [prefs setObject:[usuario token] forKey:@"token"];
                 
                 WebViewController *webView =  [[WebViewController alloc]init];
                 
@@ -140,7 +146,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
 }
 
 - (void)viewDidUnload

@@ -35,7 +35,7 @@
 		9C6516D115FBF89B00EAF22D /* UsuarioService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D015FBF89B00EAF22D /* UsuarioService.m */; };
 		9C6516D415FBF8DC00EAF22D /* PromocaoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D315FBF8DC00EAF22D /* PromocaoService.m */; };
 		9C6516D715FBFA5000EAF22D /* ControleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D615FBFA5000EAF22D /* ControleService.m */; };
-		9CDDB6F115FC1AAC00D5492C /* promocoes.db in Resources */ = {isa = PBXBuildFile; fileRef = 9CDDB6F015FC1AAC00D5492C /* promocoes.db */; };
+		9CED4F3816082194005D2A6B /* promocoes.db in Resources */ = {isa = PBXBuildFile; fileRef = 9CED4F3716082194005D2A6B /* promocoes.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,7 +83,7 @@
 		9C6516D315FBF8DC00EAF22D /* PromocaoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocaoService.m; sourceTree = "<group>"; };
 		9C6516D515FBFA5000EAF22D /* ControleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControleService.h; sourceTree = "<group>"; };
 		9C6516D615FBFA5000EAF22D /* ControleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControleService.m; sourceTree = "<group>"; };
-		9CDDB6F015FC1AAC00D5492C /* promocoes.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = promocoes.db; sourceTree = "<group>"; };
+		9CED4F3716082194005D2A6B /* promocoes.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = promocoes.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +182,7 @@
 		9C48C8B715F6D79000BA95FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9CDDB6F015FC1AAC00D5492C /* promocoes.db */,
+				9CED4F3716082194005D2A6B /* promocoes.db */,
 				9C48C8B815F6D79000BA95FC /* Zapeat-Info.plist */,
 				9C48C8B915F6D79000BA95FC /* InfoPlist.strings */,
 				9C48C8BC15F6D79000BA95FC /* main.m */,
@@ -305,7 +305,7 @@
 				9C2B0DEE15FACA4700BB3CC6 /* ic_launcher.png in Resources */,
 				9C2B0DF015FACB3F00BB3CC6 /* screen.png in Resources */,
 				9C2B0DF215FACB5900BB3CC6 /* Default.png in Resources */,
-				9CDDB6F115FC1AAC00D5492C /* promocoes.db in Resources */,
+				9CED4F3816082194005D2A6B /* promocoes.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

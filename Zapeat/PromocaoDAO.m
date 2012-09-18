@@ -24,9 +24,9 @@
     
     for(Promocao *item in promocoes) {
 
-            retorno= [conexao executeUpdate:@"INSERT OR IGNORE INTO PROMOCOES(CODIGO,DESCRICAO,LOCALIDADE,LATITUDE,LONGITUDE,PRECO_ORIGINAL,PRECO_PROMOCIONAL) VALUES(?,?,?,?,?,?,?);",[NSNumber numberWithLong:item.codigo],[NSString stringWithString:item.descricao],
+            retorno= [conexao executeUpdate:@"INSERT OR IGNORE INTO PROMOCOES(CODIGO,DESCRICAO,LOCALIDADE,LATITUDE,LONGITUDE,PRECO_ORIGINAL,PRECO_PROMOCIONAL,INICIO,FIM) VALUES(?,?,?,?,?,?,?,?,?);",[NSNumber numberWithLong:item.codigo],[NSString stringWithString:item.descricao],
                       [NSString stringWithString:item.localidade],[NSNumber numberWithDouble:item.latitude],
-                                                      [NSNumber numberWithDouble:item.longitude],[NSString stringWithString:item.precoOriginal],[NSString stringWithString:item.precoPromocional]];
+                                                      [NSNumber numberWithDouble:item.longitude],[NSString stringWithString:item.precoOriginal],[NSString stringWithString:item.precoPromocional],[NSString stringWithString:item.inicio],[NSString stringWithString:item.fim]];
      
      }
     
@@ -58,6 +58,8 @@
         promocao.longitude = [rs doubleForColumn:@"longitude"];
         promocao.precoOriginal = [rs stringForColumn:@"preco_original"];
         promocao.precoPromocional = [rs stringForColumn:@"preco_promocional"];
+        promocao.inicio = [rs stringForColumn:@"inicio"];
+        promocao.fim = [rs stringForColumn:@"fim"];
         promocao.notificada = [rs intForColumn:@"notificada"];
         
         [promocoes addObject:promocao];

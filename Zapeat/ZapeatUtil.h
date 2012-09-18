@@ -11,5 +11,5 @@
 @interface ZapeatUtil : NSObject
 
 +(int) hourBetweenDates : (NSDate*) date1 and: (NSDate*) date2;
-
++ (NSString *) md5  :(NSString*) input;
 @end

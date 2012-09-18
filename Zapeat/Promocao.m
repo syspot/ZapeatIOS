@@ -10,20 +10,21 @@
 #import <CoreLocation/CLLocation.h>
 @implementation Promocao
 
-@synthesize descricao,latitude,localidade,longitude,precoOriginal,precoPromocional,codigo,notificada;
+@synthesize descricao,latitude,localidade,longitude,precoOriginal,precoPromocional,codigo,notificada,inicio,fim;
 
 +(Promocao *) init :(NSDictionary *) dicionario {
     
     Promocao * promocao = [[Promocao alloc] init];
     
-    [promocao setDescricao: [dicionario objectForKey:@"descricao"]];
-    [promocao setPrecoOriginal: [dicionario objectForKey:@"precoOriginal"]];
+    [promocao setDescricao:        [dicionario objectForKey:@"descricao"]];
+    [promocao setPrecoOriginal:    [dicionario objectForKey:@"precoOriginal"]];
     [promocao setPrecoPromocional: [dicionario objectForKey:@"precoPromocional"]];
-    [promocao setLocalidade: [dicionario objectForKey:@"localidade"]];
-    
-    [promocao setCodigo: [[dicionario objectForKey:@"idPromocao"] longValue]];
-    [promocao setLatitude:   [[dicionario objectForKey:@"latitude"] doubleValue]];
-    [promocao setLongitude:  [[dicionario objectForKey:@"longitude"] doubleValue]];
+    [promocao setLocalidade:       [dicionario objectForKey:@"localidade"]];
+    [promocao setInicio:           [dicionario objectForKey:@"dataInicial"]];
+    [promocao setFim:              [dicionario objectForKey:@"dataFinal"]];
+    [promocao setCodigo:           [[dicionario objectForKey:@"idPromocao"] longValue]];
+    [promocao setLatitude:         [[dicionario objectForKey:@"latitude"] doubleValue]];
+    [promocao setLongitude:        [[dicionario objectForKey:@"longitude"] doubleValue]];
 
     return promocao;
     

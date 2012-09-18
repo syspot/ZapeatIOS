@@ -12,6 +12,7 @@
 @property(nonatomic) long codigo;
 @property(nonatomic,strong) NSString *login;
 @property(nonatomic,strong) NSString *senha;
+@property(nonatomic,strong) NSString *token;
 @property(nonatomic,strong) NSMutableArray *promocoes;
 
 + (Usuario *) init : (NSDictionary *) dicionario;
