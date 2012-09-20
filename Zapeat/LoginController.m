@@ -78,10 +78,7 @@
     if([trimmed length]==0) {
         
         [self showAlert:@"Erro de validação" message:@"Login: Campo obrigatório"];
-        
-        [textLogin release];
-        [trimmed release];
-        
+
         return false;
         
     } else {
@@ -92,17 +89,11 @@
         
         if([trimmed length]==0) {
             [self showAlert:@"Erro de validação" message:@"Senha: Campo obrigatório"];
-            [textSenha release];
-            [trimmed release];
             return false;
             
         }
         
     }
-    
-    [textLogin release];
-    [trimmed release];
-    
     return true;
     
 }

@@ -33,12 +33,26 @@
     
     webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSString *urlAddress = [NSString stringWithFormat:@"http://localhost:8080/ZapeatMobile/menu.xhtml?usuarioId=%@",[prefs stringForKey:@"token"]];
+    NSString *ultimaPromocaoNotificada = [prefs objectForKey:@"ultimaPromocaoNotificada"];
+    NSString *urlAddress = nil;
+    
+    if(ultimaPromocaoNotificada !=nil) {
+    
+         urlAddress = [NSString stringWithFormat:@"http://localhost:8080/ZapeatMobile/detalhamento.xhtml?usuarioId=%@&promocaoId=%@",[prefs stringForKey:@"token"],ultimaPromocaoNotificada];
+        
+        [prefs removeObjectForKey:@"ultimaPromocaoNotificada"];
+        
+    } else {
+    
+     urlAddress = [NSString stringWithFormat:@"http://localhost:8080/ZapeatMobile/menu.xhtml?usuarioId=%@",[prefs stringForKey:@"token"]];
+    }
+    
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
     [self.view addSubview:webView];
     [webView setDelegate:self];
+    
 }
 
 - (void)locationUpdate:(CLLocation *)location {
@@ -47,18 +61,20 @@
     double longitude = location.coordinate.longitude;
     PromocaoService *promocaoService = [[PromocaoService alloc]init];
     double distancia=-1;
-    
+     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     for(Promocao *promocao in [promocaoService getPromocoes]) {
         
         distancia = -1;
         
         distancia = [promocao distancia:latitude longitude:longitude];
         
-        if(promocao.notificada==0 && distancia>0 && distancia < 5000) {
+        if(promocao.notificada==0 && distancia>0 && distancia < 920312903123) {
             
             [promocaoService markAsNotified:promocao];
             
             [self showAlert:promocao];
+            
+            [prefs setObject:[promocao codigo] forKey:@"ultimaPromocaoNotificada"];
             
         }
         
@@ -169,6 +185,7 @@
     if([url hasSuffix:@"sair.xhtml"]) {
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         [prefs removeObjectForKey:@"token"];
+        [[[PromocaoService alloc]init] clean];
         exit(0);
     }
     

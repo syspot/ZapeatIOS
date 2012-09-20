@@ -46,7 +46,7 @@
     
     FMDatabase *conexao = [DBUtil getConnection];
     
-    FMResultSet *rs = [conexao executeQuery:@"SELECT * FROM promocoes"];
+    FMResultSet *rs = [conexao executeQuery:@"SELECT * FROM promocoes where (inicio is null or strftime('%s','now') - strftime('%s',inicio) > 0) and (fim is null or  strftime('%s','now') - strftime('%s',fim) < 0) "];
     
     while([rs next]) {
         
