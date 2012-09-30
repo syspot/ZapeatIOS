@@ -38,13 +38,13 @@
     
     if(ultimaPromocaoNotificada !=nil) {
     
-         urlAddress = [NSString stringWithFormat:@"http://localhost:8080/ZapeatMobile/detalhamento.xhtml?usuarioId=%@&promocaoId=%@",[prefs stringForKey:@"token"],ultimaPromocaoNotificada];
+         urlAddress = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/detalhamento.xhtml?usuarioId=%@&promocaoId=%@",[prefs stringForKey:@"token"],ultimaPromocaoNotificada];
         
         [prefs removeObjectForKey:@"ultimaPromocaoNotificada"];
         
     } else {
     
-     urlAddress = [NSString stringWithFormat:@"http://localhost:8080/ZapeatMobile/menu.xhtml?usuarioId=%@",[prefs stringForKey:@"token"]];
+     urlAddress = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/menu.xhtml?usuarioId=%@",[prefs stringForKey:@"token"]];
     }
     
     NSURL *url = [NSURL URLWithString:urlAddress];
@@ -68,7 +68,7 @@
         
         distancia = [promocao distancia:latitude longitude:longitude];
         
-        if(promocao.notificada==0 && distancia>0 && distancia < 920312903123) {
+        if(promocao.notificada==0 && distancia>0 && distancia < 5000) {
             
             [promocaoService markAsNotified:promocao];
             
@@ -101,7 +101,7 @@
         
         if(intervalo>3) {
             
-            NSString *url = [NSString stringWithFormat:@"http://192.168.0.17:8080/ZapeatMobile/promocoes"];
+            NSString *url = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/promocoes"];
             NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
             NSError* error;
             NSDictionary *resultados = [NSJSONSerialization JSONObjectWithData:jsonData

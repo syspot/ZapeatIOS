@@ -31,7 +31,7 @@
             usuario.login = login.text;
             usuario.senha = [ZapeatUtil md5:senha.text];
             
-            NSString *url = [NSString stringWithFormat:@"http://192.168.0.17:8080/ZapeatMobile/autenticarIOS?email=%@",usuario.login];
+            NSString *url = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/autenticarIOS?email=%@",usuario.login];
            
             NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
             
