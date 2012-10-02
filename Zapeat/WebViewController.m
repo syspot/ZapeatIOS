@@ -186,7 +186,9 @@
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         [prefs removeObjectForKey:@"token"];
         [[[PromocaoService alloc]init] clean];
-        exit(0);
+        LoginController *loginController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginController"];
+        [self presentModalViewController:loginController animated:YES];
+        
     }
     
     return YES;
