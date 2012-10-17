@@ -44,6 +44,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ic_launcher.png" id="j9o-J8-0OE">
+                                <rect key="frame" x="128" y="37" width="64" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.89037024456521741" green="0.69605331934954151" blue="0.11310254370251377" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
@@ -84,6 +88,9 @@
             <point key="canvasLocation" x="550" y="212"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_launcher.png" width="113" height="96"/>
+    </resources>
     <classes>
         <class className="LoginController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginController.h"/>
