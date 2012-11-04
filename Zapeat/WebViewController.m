@@ -38,13 +38,13 @@
     
     if(ultimaPromocaoNotificada !=nil) {
     
-         urlAddress = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/detalhamento.xhtml?usuarioId=%@&promocaoId=%@",[prefs stringForKey:@"token"],ultimaPromocaoNotificada];
+         urlAddress = [NSString stringWithFormat:@"http://192.168.0.17:8080/ZapeatMobile/detalhamento.xhtml?usuarioId=%@&promocaoId=%@",[prefs stringForKey:@"token"],ultimaPromocaoNotificada];
         
         [prefs removeObjectForKey:@"ultimaPromocaoNotificada"];
         
     } else {
     
-     urlAddress = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/menu.xhtml?usuarioId=%@",[prefs stringForKey:@"token"]];
+     urlAddress = [NSString stringWithFormat:@"http://192.168.0.17:8080/ZapeatMobile/menu.xhtml?usuarioId=%@",[prefs stringForKey:@"token"]];
     }
     
     NSURL *url = [NSURL URLWithString:urlAddress];
@@ -53,10 +53,14 @@
     [self.view addSubview:webView];
     [webView setDelegate:self];
     
+    [self verifyPromocoes];
+    
 }
 
 - (void)locationUpdate:(CLLocation *)location {
 
+    [self verifyPromocoes];
+    
     double latitude = location.coordinate.latitude;
     double longitude = location.coordinate.longitude;
     PromocaoService *promocaoService = [[PromocaoService alloc]init];
@@ -80,8 +84,6 @@
         
     }
     
-    [self verifyPromocoes];
-    
 }
 
 - (void)locationError:(NSError *)error {
@@ -101,7 +103,7 @@
         
         if(intervalo>3) {
             
-            NSString *url = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/promocoes"];
+            NSString *url = [NSString stringWithFormat:@"http://192.168.0.17:8080/ZapeatMobile/promocoes"];
             NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
             NSError* error;
             NSDictionary *resultados = [NSJSONSerialization JSONObjectWithData:jsonData
@@ -121,6 +123,8 @@
             PromocaoService *promocaoService = [[PromocaoService alloc]init];
             
             [promocaoService inserir:promocoesDia];
+            
+            [service updateDataATualizacao];
             
         }
     }
