@@ -38,13 +38,13 @@
     
     if(ultimaPromocaoNotificada !=nil) {
     
-         urlAddress = [NSString stringWithFormat:@"http://192.168.0.17:8080/ZapeatMobile/detalhamento.xhtml?usuarioId=%@&promocaoId=%@",[prefs stringForKey:@"token"],ultimaPromocaoNotificada];
+         urlAddress = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/detalhamento.xhtml?promocaoId=%@",ultimaPromocaoNotificada];
         
         [prefs removeObjectForKey:@"ultimaPromocaoNotificada"];
         
     } else {
     
-     urlAddress = [NSString stringWithFormat:@"http://192.168.0.17:8080/ZapeatMobile/menu.xhtml?usuarioId=%@",[prefs stringForKey:@"token"]];
+     urlAddress = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/menu.xhtml"];
     }
     
     NSURL *url = [NSURL URLWithString:urlAddress];
