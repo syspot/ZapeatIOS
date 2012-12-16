@@ -64,6 +64,8 @@
         
         [promocoes addObject:promocao];
         
+        [promocao release];
+        
     }
     
     [DBUtil closeConnection:conexao];

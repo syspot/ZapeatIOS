@@ -11,6 +11,7 @@
 #import "Promocao.h"
 @interface WebViewController : UIViewController  <CoreLocationControllerDelegate,UIWebViewDelegate> {
     CoreLocationController *CLController;
+    UIActivityIndicatorView *loadingIndicator;
 }
 
 - (void)showAlert:(Promocao *)promocao;

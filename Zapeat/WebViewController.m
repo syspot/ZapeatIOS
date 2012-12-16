@@ -11,7 +11,7 @@
 #import "ControleService.h"
 #import "CoreLocationController.h"
 #import "ZapeatUtil.h"
-#import "LoginController.h"
+#import "SemConexaoController.h"
 @interface WebViewController ()
 
 @end
@@ -38,13 +38,13 @@
     
     if(ultimaPromocaoNotificada !=nil) {
     
-         urlAddress = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/detalhamento.xhtml?promocaoId=%@",ultimaPromocaoNotificada];
+         urlAddress = [NSString stringWithFormat:@"http://www.zapeat.com/ZapeatMobile/detalhamento.xhtml?promocaoId=%@",ultimaPromocaoNotificada];
         
         [prefs removeObjectForKey:@"ultimaPromocaoNotificada"];
         
     } else {
     
-     urlAddress = [NSString stringWithFormat:@"http://www.saudelivre.com.br/ZapeatMobile/menu.xhtml"];
+     urlAddress = [NSString stringWithFormat:@"http://www.zapeat.com/ZapeatMobile/menu.xhtml"];
     }
     
     NSURL *url = [NSURL URLWithString:urlAddress];
@@ -52,6 +52,14 @@
     [webView loadRequest:requestObj];
     [self.view addSubview:webView];
     [webView setDelegate:self];
+    
+    loadingIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(145, 190, 20,20)];
+    
+    [loadingIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    
+    [loadingIndicator setHidesWhenStopped:YES];
+    
+    [webView addSubview:loadingIndicator];
     
     [self verifyPromocoes];
     
@@ -84,6 +92,8 @@
         
     }
     
+    [promocaoService release];
+    
 }
 
 - (void)locationError:(NSError *)error {
@@ -103,7 +113,7 @@
         
         if(intervalo>3) {
             
-            NSString *url = [NSString stringWithFormat:@"http://192.168.0.17:8080/ZapeatMobile/promocoes"];
+            NSString *url = [NSString stringWithFormat:@"http://www.zapeat.com/ZapeatMobile/promocoes"];
             NSData *jsonData = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
             NSError* error;
             NSDictionary *resultados = [NSJSONSerialization JSONObjectWithData:jsonData
@@ -138,7 +148,7 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    [self.webView release];
+    [webView release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -184,19 +194,23 @@
 
 -(BOOL)webView:(UIWebView *)view shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
-    NSString *url = [[request URL]absoluteString];
-    
-    if([url hasSuffix:@"sair.xhtml"]) {
-        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-        [prefs removeObjectForKey:@"token"];
-        [[[PromocaoService alloc]init] clean];
-        LoginController *loginController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginController"];
-        [self presentModalViewController:loginController animated:YES];
+    if(![ZapeatUtil isNetworkAvailable]) {
+        SemConexaoController *semConexaoController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"SemConexaoController"];
+        [self presentModalViewController:semConexaoController animated:YES];
+        return NO;
         
     }
     
     return YES;
     
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [loadingIndicator stopAnimating];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    [loadingIndicator startAnimating];
 }
 
 @end

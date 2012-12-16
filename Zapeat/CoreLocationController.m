@@ -36,7 +36,7 @@
 }
 
 - (void)dealloc {
-	[self.locMgr release];
+	[locMgr release];
 	[super dealloc];
 }
 

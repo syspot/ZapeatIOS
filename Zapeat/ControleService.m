@@ -14,6 +14,7 @@
     
     ControleDAO *dao = [[ControleDAO alloc]init];
     [dao clean];
+    [dao release];
     
 }
 
@@ -21,6 +22,7 @@
     
     ControleDAO *dao = [[ControleDAO alloc]init];
     NSDate *data = [dao getUltimaDataAtualizacao];
+    [dao release];
     return data;
     
 }
@@ -29,6 +31,7 @@
     
     ControleDAO *dao = [[ControleDAO alloc]init];
     [dao updateDataAtualizacao];
+    [dao release];
 }
 
 @end

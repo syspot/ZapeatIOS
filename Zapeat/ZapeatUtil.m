@@ -8,7 +8,7 @@
 
 #import "ZapeatUtil.h"
 #import <CommonCrypto/CommonDigest.h> 
-
+#import "Reachability.h"
 @implementation ZapeatUtil
 
 +(int) hourBetweenDates : (NSDate*) date1 and: (NSDate*) date2 {
@@ -31,6 +31,22 @@
             result[8], result[9], result[10], result[11],
             result[12], result[13], result[14], result[15]
             ];
+}
+
++(BOOL) isNetworkAvailable {
+    
+    Reachability *reach = [Reachability reachabilityForInternetConnection];
+    
+    NetworkStatus status = [reach currentReachabilityStatus];
+    
+    if(status == NotReachable) {
+        
+        return NO;
+        
+    }
+    
+    return YES;
+    
 }
 
 @end

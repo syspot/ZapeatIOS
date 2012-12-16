@@ -17,10 +17,12 @@
     PromocaoService *promocaoService = [[PromocaoService alloc]init];
     [promocaoService clean];
     [promocaoService inserir:[usuario promocoes]];
+    [promocaoService release];
     
     ControleDAO *controleDAO = [[ControleDAO alloc]init];
     [controleDAO clean];
     [controleDAO updateDataAtualizacao];
+    [controleDAO release];
 
     
 }

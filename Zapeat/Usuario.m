@@ -32,6 +32,8 @@
     
     [user setPromocoes:promocoesDia];
     
+    [promocoesDia release];
+    
     return user;
 }
 

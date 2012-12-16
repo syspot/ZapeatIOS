@@ -38,6 +38,10 @@
     
     CLLocationDistance distancia = [localizacaoAtual distanceFromLocation:localizacaoDesejada];
     
+    [localizacaoAtual release];
+    
+    [localizacaoDesejada release];
+    
     return distancia;
 }
 

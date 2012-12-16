@@ -15,26 +15,29 @@
     
     PromocaoDAO  *dao = [[PromocaoDAO alloc]init];
     [dao clean];
+    [dao release];
 }
 
 -(void) inserir :(NSMutableArray *) promocoes {
     PromocaoDAO  *dao = [[PromocaoDAO alloc]init];
     [dao inserir:promocoes];
-    
+    [dao release];
 }
 
 -(NSMutableArray *) getPromocoes {
     
     PromocaoDAO  *dao = [[PromocaoDAO alloc]init];
     NSMutableArray *promocoes = [dao getPromocoes];
+    [dao release];
     return promocoes;
     
 }
 
 -(void) markAsNotified:(Promocao*) promocao {
     
-        PromocaoDAO  *dao = [[PromocaoDAO alloc]init];
-        [dao markAsNotified:promocao];
+    PromocaoDAO  *dao = [[PromocaoDAO alloc]init];
+    [dao markAsNotified:promocao];
+    [dao release];
     
 }
 

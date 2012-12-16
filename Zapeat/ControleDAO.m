@@ -47,6 +47,8 @@
         
     }
     
+    [dateFormatter release];
+    
     [DBUtil closeConnection:conexao];
     
     return date;
@@ -63,18 +65,17 @@
     
     NSString *now = [dateFormatter stringFromDate:[NSDate date]];
     
-    bool foi = false;
+    [dateFormatter release];
     
     if([self getUltimaDataAtualizacao]==nil) {
         
-     foi=   [conexao executeUpdate:@"INSERT INTO CONTROLE VALUES(?);",[NSString stringWithString:now]];
+     [conexao executeUpdate:@"INSERT INTO CONTROLE VALUES(?);",[NSString stringWithString:now]];
         
     } else {
     
-     foi=        [conexao executeUpdate:@"UPDATE CONTROLE SET DATA = ?;",[NSString stringWithString:now]];
+     [conexao executeUpdate:@"UPDATE CONTROLE SET DATA = ?;",[NSString stringWithString:now]];
         
     }
-
     
     [DBUtil closeConnection:conexao];
     
