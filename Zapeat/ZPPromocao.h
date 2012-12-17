@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Promocao : NSObject
+@interface ZPPromocao : NSObject
 
 @property(nonatomic,strong) NSString *localidade;
 @property(nonatomic,strong) NSString *descricao;
@@ -21,7 +21,7 @@
 @property(nonatomic) long codigo;
 @property(nonatomic) int notificada;
 
-+ (Promocao *) init : (NSDictionary *) dicionario;
++ (ZPPromocao *) init : (NSDictionary *) dicionario;
 
 - (double) distancia: (double) latitude longitude: (double) longitude;
 

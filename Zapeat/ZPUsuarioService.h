@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Usuario.h"
+#import "ZPUsuario.h"
 
-@interface UsuarioService : NSObject
+@interface ZPUsuarioService : NSObject
 
--(void) initConfiguration: (Usuario *) usuario;
+-(void) initConfiguration: (ZPUsuario *) usuario;
 
 @end

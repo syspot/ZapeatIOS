@@ -6,15 +6,15 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "DBUtil.h"
+#import "ZPDBUtil.h"
 #import "FMDatabase.h"
-#import "AppDelegate.h"
+#import "ZPAppDelegate.h"
 
-@implementation DBUtil
+@implementation ZPDBUtil
 
 +(FMDatabase *) getConnection {
     
-    NSString *databasePath = [(AppDelegate *)[[UIApplication sharedApplication] delegate] databasePath];
+    NSString *databasePath = [(ZPAppDelegate *)[[UIApplication sharedApplication] delegate] databasePath];
     FMDatabase *db = [FMDatabase databaseWithPath:databasePath];
     [db open];
     return db;

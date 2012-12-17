@@ -6,20 +6,20 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "UsuarioService.h"
-#import "ControleDAO.h"
-#import "PromocaoService.h"
-#import "Promocao.h"
-@implementation UsuarioService
+#import "ZPUsuarioService.h"
+#import "ZPControleDAO.h"
+#import "ZPPromocaoService.h"
+#import "ZPPromocao.h"
+@implementation ZPUsuarioService
 
--(void) initConfiguration: (Usuario *) usuario {
+-(void) initConfiguration: (ZPUsuario *) usuario {
     
-    PromocaoService *promocaoService = [[PromocaoService alloc]init];
+    ZPPromocaoService *promocaoService = [[ZPPromocaoService alloc]init];
     [promocaoService clean];
     [promocaoService inserir:[usuario promocoes]];
     [promocaoService release];
     
-    ControleDAO *controleDAO = [[ControleDAO alloc]init];
+    ZPControleDAO *controleDAO = [[ZPControleDAO alloc]init];
     [controleDAO clean];
     [controleDAO updateDataAtualizacao];
     [controleDAO release];

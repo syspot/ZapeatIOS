@@ -6,17 +6,17 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "WebViewController.h"
-#import "PromocaoService.h"
-#import "ControleService.h"
-#import "CoreLocationController.h"
-#import "ZapeatUtil.h"
-#import "SemConexaoController.h"
-@interface WebViewController ()
+#import "ZPWebViewController.h"
+#import "ZPPromocaoService.h"
+#import "ZPControleService.h"
+#import "ZPCoreLocationController.h"
+#import "ZPZapeatUtil.h"
+#import "ZPSemConexaoController.h"
+@interface ZPWebViewController ()
 
 @end
 
-@implementation WebViewController
+@implementation ZPWebViewController
 
 @synthesize webView,CLController;
 
@@ -25,13 +25,16 @@
     
     [super viewDidLoad];
 
-    CLController = [[CoreLocationController alloc] init];
+    CLController = [[ZPCoreLocationController alloc] init];
 	CLController.delegate = self;
     CLController.locMgr.distanceFilter = 500;
     CLController.locMgr.desiredAccuracy = kCLLocationAccuracyHundredMeters;
 	[CLController.locMgr startUpdatingLocation];
     
     webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    
+    webView.scrollView.bounces = NO;
+    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *ultimaPromocaoNotificada = [prefs objectForKey:@"ultimaPromocaoNotificada"];
     NSString *urlAddress = nil;
@@ -71,10 +74,10 @@
     
     double latitude = location.coordinate.latitude;
     double longitude = location.coordinate.longitude;
-    PromocaoService *promocaoService = [[PromocaoService alloc]init];
+    ZPPromocaoService *promocaoService = [[ZPPromocaoService alloc]init];
     double distancia=-1;
      NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    for(Promocao *promocao in [promocaoService getPromocoes]) {
+    for(ZPPromocao *promocao in [promocaoService getPromocoes]) {
         
         distancia = -1;
         
@@ -105,11 +108,11 @@
     
     @try {
         
-        ControleService *service = [[ControleService alloc]init];
+        ZPControleService *service = [[ZPControleService alloc]init];
         
         NSDate *ultimaAtualizacao = [service getUltimaDataAtualizacao];
         
-        int intervalo = [ZapeatUtil hourBetweenDates:ultimaAtualizacao and:[NSDate date]];
+        int intervalo = [ZPZapeatUtil hourBetweenDates:ultimaAtualizacao and:[NSDate date]];
         
         if(intervalo>3) {
             
@@ -126,11 +129,11 @@
             
             for(id item in itens) {
                 
-                [promocoesDia addObject: [Promocao init:item]];
+                [promocoesDia addObject: [ZPPromocao init:item]];
                 
             }
             
-            PromocaoService *promocaoService = [[PromocaoService alloc]init];
+            ZPPromocaoService *promocaoService = [[ZPPromocaoService alloc]init];
             
             [promocaoService inserir:promocoesDia];
             
@@ -172,7 +175,7 @@
     return self;
 }
 
-- (void)showAlert:(Promocao *)promocao {
+- (void)showAlert:(ZPPromocao *)promocao {
     
     UILocalNotification *localNotif = [[UILocalNotification alloc] init];
     if (localNotif == nil)
@@ -194,8 +197,8 @@
 
 -(BOOL)webView:(UIWebView *)view shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
-    if(![ZapeatUtil isNetworkAvailable]) {
-        SemConexaoController *semConexaoController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"SemConexaoController"];
+    if(![ZPZapeatUtil isNetworkAvailable]) {
+        ZPSemConexaoController *semConexaoController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"ZPSemConexaoController"];
         [self presentModalViewController:semConexaoController animated:YES];
         return NO;
         

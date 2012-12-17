@@ -6,22 +6,22 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "SemConexaoController.h"
-#import "Usuario.h"
-#import "WebViewController.h"
-#import "UsuarioService.h"
-#import "ZapeatUtil.h"
-@interface SemConexaoController ()
+#import "ZPSemConexaoController.h"
+#import "ZPUsuario.h"
+#import "ZPWebViewController.h"
+#import "ZPUsuarioService.h"
+#import "ZPZapeatUtil.h"
+@interface ZPSemConexaoController ()
 
 @end
 
-@implementation SemConexaoController
+@implementation ZPSemConexaoController
 
 - (IBAction)tentarNovamente:(id)sender {
     
-    if([ZapeatUtil isNetworkAvailable]) {
+    if([ZPZapeatUtil isNetworkAvailable]) {
         
-        WebViewController *webViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"WebViewController"];
+        ZPWebViewController *webViewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"ZPWebViewController"];
         [self presentModalViewController:webViewController animated:YES];
         
     }

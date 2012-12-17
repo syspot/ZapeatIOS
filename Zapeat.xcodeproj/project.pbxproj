@@ -7,51 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C2B0DE315FAB3E500BB3CC6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B0DE215FAB3E500BB3CC6 /* WebViewController.m */; };
+		9C2B0DE315FAB3E500BB3CC6 /* ZPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B0DE215FAB3E500BB3CC6 /* ZPWebViewController.m */; };
 		9C2B0DEE15FACA4700BB3CC6 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B0DED15FACA4700BB3CC6 /* ic_launcher.png */; };
 		9C2B0DF015FACB3F00BB3CC6 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B0DEF15FACB3F00BB3CC6 /* screen.png */; };
 		9C2B0DF215FACB5900BB3CC6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B0DF115FACB5900BB3CC6 /* Default.png */; };
 		9C2B0DF515FAE85500BB3CC6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2B0DF415FAE85500BB3CC6 /* libsqlite3.dylib */; };
-		9C2B0DF815FAE91100BB3CC6 /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B0DF715FAE91100BB3CC6 /* DBUtil.m */; };
-		9C2B0DFB15FAEB0500BB3CC6 /* PromocaoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B0DFA15FAEB0500BB3CC6 /* PromocaoDAO.m */; };
+		9C2B0DF815FAE91100BB3CC6 /* ZPDBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B0DF715FAE91100BB3CC6 /* ZPDBUtil.m */; };
+		9C2B0DFB15FAEB0500BB3CC6 /* ZPPromocaoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B0DFA15FAEB0500BB3CC6 /* ZPPromocaoDAO.m */; };
+		9C444F34167E94EB002AC83C /* logo_zapeat_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C444F33167E94EB002AC83C /* logo_zapeat_57x57.png */; };
+		9C444F37167E9860002AC83C /* logo_zapeat_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C444F35167E94F8002AC83C /* logo_zapeat_114.png */; };
 		9C48C8B115F6D79000BA95FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C48C8B015F6D79000BA95FC /* UIKit.framework */; };
 		9C48C8B315F6D79000BA95FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C48C8B215F6D79000BA95FC /* Foundation.framework */; };
 		9C48C8B515F6D79000BA95FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C48C8B415F6D79000BA95FC /* CoreGraphics.framework */; };
 		9C48C8BB15F6D79000BA95FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C48C8B915F6D79000BA95FC /* InfoPlist.strings */; };
 		9C48C8BD15F6D79000BA95FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8BC15F6D79000BA95FC /* main.m */; };
-		9C48C8C115F6D79000BA95FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8C015F6D79000BA95FC /* AppDelegate.m */; };
+		9C48C8C115F6D79000BA95FC /* ZPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8C015F6D79000BA95FC /* ZPAppDelegate.m */; };
 		9C48C8CD15F6D79000BA95FC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C48C8CB15F6D79000BA95FC /* MainStoryboard.storyboard */; };
-		9C48C8D515F6D8C400BA95FC /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8D415F6D8C400BA95FC /* Usuario.m */; };
-		9C48C8D915F6D99E00BA95FC /* Promocao.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8D815F6D99E00BA95FC /* Promocao.m */; };
-		9C48C8DC15F6E82800BA95FC /* SemConexaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8DB15F6E82800BA95FC /* SemConexaoController.m */; };
+		9C48C8D515F6D8C400BA95FC /* ZPUsuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8D415F6D8C400BA95FC /* ZPUsuario.m */; };
+		9C48C8D915F6D99E00BA95FC /* ZPPromocao.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8D815F6D99E00BA95FC /* ZPPromocao.m */; };
+		9C48C8DC15F6E82800BA95FC /* ZPSemConexaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48C8DB15F6E82800BA95FC /* ZPSemConexaoController.m */; };
 		9C48C90C15F6F60D00BA95FC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C48C90B15F6F60D00BA95FC /* CoreLocation.framework */; };
 		9C6516B815FBAFAA00EAF22D /* FMDatabase.h in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516B415FBAD9D00EAF22D /* FMDatabase.h */; };
 		9C6516B915FBAFAA00EAF22D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516B515FBAD9D00EAF22D /* FMDatabase.m */; };
 		9C6516BA15FBAFAA00EAF22D /* FMResultSet.h in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516B615FBAD9D00EAF22D /* FMResultSet.h */; };
 		9C6516BB15FBAFAA00EAF22D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516B715FBAD9D00EAF22D /* FMResultSet.m */; };
-		9C6516C415FBC98900EAF22D /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516C315FBC98900EAF22D /* CoreLocationController.m */; };
-		9C6516C915FBF3F700EAF22D /* ZapeatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516C815FBF3F700EAF22D /* ZapeatUtil.m */; };
-		9C6516CC15FBF52100EAF22D /* ControleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516CB15FBF52100EAF22D /* ControleDAO.m */; };
-		9C6516D115FBF89B00EAF22D /* UsuarioService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D015FBF89B00EAF22D /* UsuarioService.m */; };
-		9C6516D415FBF8DC00EAF22D /* PromocaoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D315FBF8DC00EAF22D /* PromocaoService.m */; };
-		9C6516D715FBFA5000EAF22D /* ControleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D615FBFA5000EAF22D /* ControleService.m */; };
+		9C6516C415FBC98900EAF22D /* ZPCoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516C315FBC98900EAF22D /* ZPCoreLocationController.m */; };
+		9C6516C915FBF3F700EAF22D /* ZPZapeatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516C815FBF3F700EAF22D /* ZPZapeatUtil.m */; };
+		9C6516CC15FBF52100EAF22D /* ZPControleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516CB15FBF52100EAF22D /* ZPControleDAO.m */; };
+		9C6516D115FBF89B00EAF22D /* ZPUsuarioService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D015FBF89B00EAF22D /* ZPUsuarioService.m */; };
+		9C6516D415FBF8DC00EAF22D /* ZPPromocaoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D315FBF8DC00EAF22D /* ZPPromocaoService.m */; };
+		9C6516D715FBFA5000EAF22D /* ZPControleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6516D615FBFA5000EAF22D /* ZPControleService.m */; };
 		9CC7210A167E68BE002CB839 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC72109167E68BE002CB839 /* SystemConfiguration.framework */; };
 		9CC72114167E6A8A002CB839 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC72113167E6A8A002CB839 /* Reachability.m */; };
 		9CC72116167E6B07002CB839 /* semconexao.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CC72115167E6B07002CB839 /* semconexao.png */; };
+		9CE76AF3167E8EAC001C771C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE76AF2167E8EAC001C771C /* Default-568h@2x.png */; };
 		9CED4F3816082194005D2A6B /* promocoes.db in Resources */ = {isa = PBXBuildFile; fileRef = 9CED4F3716082194005D2A6B /* promocoes.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9C2B0DE115FAB3E500BB3CC6 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		9C2B0DE215FAB3E500BB3CC6 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		9C2B0DE115FAB3E500BB3CC6 /* ZPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPWebViewController.h; sourceTree = "<group>"; };
+		9C2B0DE215FAB3E500BB3CC6 /* ZPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPWebViewController.m; sourceTree = "<group>"; };
 		9C2B0DED15FACA4700BB3CC6 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		9C2B0DEF15FACB3F00BB3CC6 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
 		9C2B0DF115FACB5900BB3CC6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9C2B0DF415FAE85500BB3CC6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		9C2B0DF615FAE91100BB3CC6 /* DBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUtil.h; sourceTree = "<group>"; };
-		9C2B0DF715FAE91100BB3CC6 /* DBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtil.m; sourceTree = "<group>"; };
-		9C2B0DF915FAEB0500BB3CC6 /* PromocaoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocaoDAO.h; sourceTree = "<group>"; };
-		9C2B0DFA15FAEB0500BB3CC6 /* PromocaoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocaoDAO.m; sourceTree = "<group>"; };
+		9C2B0DF615FAE91100BB3CC6 /* ZPDBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPDBUtil.h; sourceTree = "<group>"; };
+		9C2B0DF715FAE91100BB3CC6 /* ZPDBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPDBUtil.m; sourceTree = "<group>"; };
+		9C2B0DF915FAEB0500BB3CC6 /* ZPPromocaoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPPromocaoDAO.h; sourceTree = "<group>"; };
+		9C2B0DFA15FAEB0500BB3CC6 /* ZPPromocaoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPPromocaoDAO.m; sourceTree = "<group>"; };
+		9C444F33167E94EB002AC83C /* logo_zapeat_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_zapeat_57x57.png; sourceTree = "<group>"; };
+		9C444F35167E94F8002AC83C /* logo_zapeat_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_zapeat_114.png; sourceTree = "<group>"; };
 		9C48C8AC15F6D79000BA95FC /* Zapeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zapeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C48C8B015F6D79000BA95FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C48C8B215F6D79000BA95FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,36 +65,37 @@
 		9C48C8BA15F6D79000BA95FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C48C8BC15F6D79000BA95FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C48C8BE15F6D79000BA95FC /* Zapeat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zapeat-Prefix.pch"; sourceTree = "<group>"; };
-		9C48C8BF15F6D79000BA95FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9C48C8C015F6D79000BA95FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C48C8BF15F6D79000BA95FC /* ZPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZPAppDelegate.h; sourceTree = "<group>"; };
+		9C48C8C015F6D79000BA95FC /* ZPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZPAppDelegate.m; sourceTree = "<group>"; };
 		9C48C8CC15F6D79000BA95FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9C48C8D315F6D8C400BA95FC /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
-		9C48C8D415F6D8C400BA95FC /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
-		9C48C8D715F6D99E00BA95FC /* Promocao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Promocao.h; sourceTree = "<group>"; };
-		9C48C8D815F6D99E00BA95FC /* Promocao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Promocao.m; sourceTree = "<group>"; };
-		9C48C8DA15F6E82800BA95FC /* SemConexaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SemConexaoController.h; sourceTree = "<group>"; };
-		9C48C8DB15F6E82800BA95FC /* SemConexaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemConexaoController.m; sourceTree = "<group>"; };
+		9C48C8D315F6D8C400BA95FC /* ZPUsuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPUsuario.h; sourceTree = "<group>"; };
+		9C48C8D415F6D8C400BA95FC /* ZPUsuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPUsuario.m; sourceTree = "<group>"; };
+		9C48C8D715F6D99E00BA95FC /* ZPPromocao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPPromocao.h; sourceTree = "<group>"; };
+		9C48C8D815F6D99E00BA95FC /* ZPPromocao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPPromocao.m; sourceTree = "<group>"; };
+		9C48C8DA15F6E82800BA95FC /* ZPSemConexaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPSemConexaoController.h; sourceTree = "<group>"; };
+		9C48C8DB15F6E82800BA95FC /* ZPSemConexaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPSemConexaoController.m; sourceTree = "<group>"; };
 		9C48C90B15F6F60D00BA95FC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9C6516B415FBAD9D00EAF22D /* FMDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		9C6516B515FBAD9D00EAF22D /* FMDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		9C6516B615FBAD9D00EAF22D /* FMResultSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		9C6516B715FBAD9D00EAF22D /* FMResultSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		9C6516C215FBC98900EAF22D /* CoreLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationController.h; sourceTree = "<group>"; };
-		9C6516C315FBC98900EAF22D /* CoreLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationController.m; sourceTree = "<group>"; };
-		9C6516C715FBF3F700EAF22D /* ZapeatUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZapeatUtil.h; sourceTree = "<group>"; };
-		9C6516C815FBF3F700EAF22D /* ZapeatUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZapeatUtil.m; sourceTree = "<group>"; };
-		9C6516CA15FBF52100EAF22D /* ControleDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControleDAO.h; sourceTree = "<group>"; };
-		9C6516CB15FBF52100EAF22D /* ControleDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControleDAO.m; sourceTree = "<group>"; };
-		9C6516CF15FBF89B00EAF22D /* UsuarioService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuarioService.h; sourceTree = "<group>"; };
-		9C6516D015FBF89B00EAF22D /* UsuarioService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuarioService.m; sourceTree = "<group>"; };
-		9C6516D215FBF8DC00EAF22D /* PromocaoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromocaoService.h; sourceTree = "<group>"; };
-		9C6516D315FBF8DC00EAF22D /* PromocaoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromocaoService.m; sourceTree = "<group>"; };
-		9C6516D515FBFA5000EAF22D /* ControleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControleService.h; sourceTree = "<group>"; };
-		9C6516D615FBFA5000EAF22D /* ControleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControleService.m; sourceTree = "<group>"; };
+		9C6516C215FBC98900EAF22D /* ZPCoreLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPCoreLocationController.h; sourceTree = "<group>"; };
+		9C6516C315FBC98900EAF22D /* ZPCoreLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPCoreLocationController.m; sourceTree = "<group>"; };
+		9C6516C715FBF3F700EAF22D /* ZPZapeatUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPZapeatUtil.h; sourceTree = "<group>"; };
+		9C6516C815FBF3F700EAF22D /* ZPZapeatUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPZapeatUtil.m; sourceTree = "<group>"; };
+		9C6516CA15FBF52100EAF22D /* ZPControleDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPControleDAO.h; sourceTree = "<group>"; };
+		9C6516CB15FBF52100EAF22D /* ZPControleDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPControleDAO.m; sourceTree = "<group>"; };
+		9C6516CF15FBF89B00EAF22D /* ZPUsuarioService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPUsuarioService.h; sourceTree = "<group>"; };
+		9C6516D015FBF89B00EAF22D /* ZPUsuarioService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPUsuarioService.m; sourceTree = "<group>"; };
+		9C6516D215FBF8DC00EAF22D /* ZPPromocaoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPPromocaoService.h; sourceTree = "<group>"; };
+		9C6516D315FBF8DC00EAF22D /* ZPPromocaoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPPromocaoService.m; sourceTree = "<group>"; };
+		9C6516D515FBFA5000EAF22D /* ZPControleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPControleService.h; sourceTree = "<group>"; };
+		9C6516D615FBFA5000EAF22D /* ZPControleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPControleService.m; sourceTree = "<group>"; };
 		9CC72109167E68BE002CB839 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9CC72112167E6A8A002CB839 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		9CC72113167E6A8A002CB839 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		9CC72115167E6B07002CB839 /* semconexao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = semconexao.png; sourceTree = "<group>"; };
+		9CE76AF2167E8EAC001C771C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9CED4F3716082194005D2A6B /* promocoes.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = promocoes.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +121,8 @@
 			children = (
 				9CC72112167E6A8A002CB839 /* Reachability.h */,
 				9CC72113167E6A8A002CB839 /* Reachability.m */,
-				9C6516C715FBF3F700EAF22D /* ZapeatUtil.h */,
-				9C6516C815FBF3F700EAF22D /* ZapeatUtil.m */,
+				9C6516C715FBF3F700EAF22D /* ZPZapeatUtil.h */,
+				9C6516C815FBF3F700EAF22D /* ZPZapeatUtil.m */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -134,12 +140,12 @@
 		9C2B0DF315FAE76800BB3CC6 /* dao */ = {
 			isa = PBXGroup;
 			children = (
-				9C2B0DF615FAE91100BB3CC6 /* DBUtil.h */,
-				9C2B0DF715FAE91100BB3CC6 /* DBUtil.m */,
-				9C2B0DF915FAEB0500BB3CC6 /* PromocaoDAO.h */,
-				9C2B0DFA15FAEB0500BB3CC6 /* PromocaoDAO.m */,
-				9C6516CA15FBF52100EAF22D /* ControleDAO.h */,
-				9C6516CB15FBF52100EAF22D /* ControleDAO.m */,
+				9C2B0DF615FAE91100BB3CC6 /* ZPDBUtil.h */,
+				9C2B0DF715FAE91100BB3CC6 /* ZPDBUtil.m */,
+				9C2B0DF915FAEB0500BB3CC6 /* ZPPromocaoDAO.h */,
+				9C2B0DFA15FAEB0500BB3CC6 /* ZPPromocaoDAO.m */,
+				9C6516CA15FBF52100EAF22D /* ZPControleDAO.h */,
+				9C6516CB15FBF52100EAF22D /* ZPControleDAO.m */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -147,6 +153,9 @@
 		9C48C8A115F6D79000BA95FC = {
 			isa = PBXGroup;
 			children = (
+				9C444F35167E94F8002AC83C /* logo_zapeat_114.png */,
+				9C444F33167E94EB002AC83C /* logo_zapeat_57x57.png */,
+				9CE76AF2167E8EAC001C771C /* Default-568h@2x.png */,
 				9CC72109167E68BE002CB839 /* SystemConfiguration.framework */,
 				9C2B0DF415FAE85500BB3CC6 /* libsqlite3.dylib */,
 				9C2B0DF115FACB5900BB3CC6 /* Default.png */,
@@ -206,10 +215,10 @@
 		9C48C8D615F6D98F00BA95FC /* model */ = {
 			isa = PBXGroup;
 			children = (
-				9C48C8D315F6D8C400BA95FC /* Usuario.h */,
-				9C48C8D415F6D8C400BA95FC /* Usuario.m */,
-				9C48C8D715F6D99E00BA95FC /* Promocao.h */,
-				9C48C8D815F6D99E00BA95FC /* Promocao.m */,
+				9C48C8D315F6D8C400BA95FC /* ZPUsuario.h */,
+				9C48C8D415F6D8C400BA95FC /* ZPUsuario.m */,
+				9C48C8D715F6D99E00BA95FC /* ZPPromocao.h */,
+				9C48C8D815F6D99E00BA95FC /* ZPPromocao.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -218,12 +227,12 @@
 			isa = PBXGroup;
 			children = (
 				9C48C8CB15F6D79000BA95FC /* MainStoryboard.storyboard */,
-				9C48C8DA15F6E82800BA95FC /* SemConexaoController.h */,
-				9C48C8DB15F6E82800BA95FC /* SemConexaoController.m */,
-				9C2B0DE115FAB3E500BB3CC6 /* WebViewController.h */,
-				9C2B0DE215FAB3E500BB3CC6 /* WebViewController.m */,
-				9C6516C215FBC98900EAF22D /* CoreLocationController.h */,
-				9C6516C315FBC98900EAF22D /* CoreLocationController.m */,
+				9C48C8DA15F6E82800BA95FC /* ZPSemConexaoController.h */,
+				9C48C8DB15F6E82800BA95FC /* ZPSemConexaoController.m */,
+				9C2B0DE115FAB3E500BB3CC6 /* ZPWebViewController.h */,
+				9C2B0DE215FAB3E500BB3CC6 /* ZPWebViewController.m */,
+				9C6516C215FBC98900EAF22D /* ZPCoreLocationController.h */,
+				9C6516C315FBC98900EAF22D /* ZPCoreLocationController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -242,8 +251,8 @@
 		9C6516BE15FBC8F900EAF22D /* delegate */ = {
 			isa = PBXGroup;
 			children = (
-				9C48C8BF15F6D79000BA95FC /* AppDelegate.h */,
-				9C48C8C015F6D79000BA95FC /* AppDelegate.m */,
+				9C48C8BF15F6D79000BA95FC /* ZPAppDelegate.h */,
+				9C48C8C015F6D79000BA95FC /* ZPAppDelegate.m */,
 			);
 			name = delegate;
 			sourceTree = "<group>";
@@ -251,12 +260,12 @@
 		9C6516CE15FBF89000EAF22D /* service */ = {
 			isa = PBXGroup;
 			children = (
-				9C6516CF15FBF89B00EAF22D /* UsuarioService.h */,
-				9C6516D015FBF89B00EAF22D /* UsuarioService.m */,
-				9C6516D215FBF8DC00EAF22D /* PromocaoService.h */,
-				9C6516D315FBF8DC00EAF22D /* PromocaoService.m */,
-				9C6516D515FBFA5000EAF22D /* ControleService.h */,
-				9C6516D615FBFA5000EAF22D /* ControleService.m */,
+				9C6516CF15FBF89B00EAF22D /* ZPUsuarioService.h */,
+				9C6516D015FBF89B00EAF22D /* ZPUsuarioService.m */,
+				9C6516D215FBF8DC00EAF22D /* ZPPromocaoService.h */,
+				9C6516D315FBF8DC00EAF22D /* ZPPromocaoService.m */,
+				9C6516D515FBFA5000EAF22D /* ZPControleService.h */,
+				9C6516D615FBFA5000EAF22D /* ZPControleService.m */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -287,6 +296,7 @@
 		9C48C8A315F6D79000BA95FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZP;
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = TopSys;
 			};
@@ -319,6 +329,9 @@
 				9C2B0DF215FACB5900BB3CC6 /* Default.png in Resources */,
 				9CED4F3816082194005D2A6B /* promocoes.db in Resources */,
 				9CC72116167E6B07002CB839 /* semconexao.png in Resources */,
+				9CE76AF3167E8EAC001C771C /* Default-568h@2x.png in Resources */,
+				9C444F34167E94EB002AC83C /* logo_zapeat_57x57.png in Resources */,
+				9C444F37167E9860002AC83C /* logo_zapeat_114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,19 +347,19 @@
 				9C6516BA15FBAFAA00EAF22D /* FMResultSet.h in Sources */,
 				9C6516BB15FBAFAA00EAF22D /* FMResultSet.m in Sources */,
 				9C48C8BD15F6D79000BA95FC /* main.m in Sources */,
-				9C48C8C115F6D79000BA95FC /* AppDelegate.m in Sources */,
-				9C48C8D515F6D8C400BA95FC /* Usuario.m in Sources */,
-				9C48C8D915F6D99E00BA95FC /* Promocao.m in Sources */,
-				9C48C8DC15F6E82800BA95FC /* SemConexaoController.m in Sources */,
-				9C2B0DE315FAB3E500BB3CC6 /* WebViewController.m in Sources */,
-				9C2B0DF815FAE91100BB3CC6 /* DBUtil.m in Sources */,
-				9C2B0DFB15FAEB0500BB3CC6 /* PromocaoDAO.m in Sources */,
-				9C6516C415FBC98900EAF22D /* CoreLocationController.m in Sources */,
-				9C6516C915FBF3F700EAF22D /* ZapeatUtil.m in Sources */,
-				9C6516CC15FBF52100EAF22D /* ControleDAO.m in Sources */,
-				9C6516D115FBF89B00EAF22D /* UsuarioService.m in Sources */,
-				9C6516D415FBF8DC00EAF22D /* PromocaoService.m in Sources */,
-				9C6516D715FBFA5000EAF22D /* ControleService.m in Sources */,
+				9C48C8C115F6D79000BA95FC /* ZPAppDelegate.m in Sources */,
+				9C48C8D515F6D8C400BA95FC /* ZPUsuario.m in Sources */,
+				9C48C8D915F6D99E00BA95FC /* ZPPromocao.m in Sources */,
+				9C48C8DC15F6E82800BA95FC /* ZPSemConexaoController.m in Sources */,
+				9C2B0DE315FAB3E500BB3CC6 /* ZPWebViewController.m in Sources */,
+				9C2B0DF815FAE91100BB3CC6 /* ZPDBUtil.m in Sources */,
+				9C2B0DFB15FAEB0500BB3CC6 /* ZPPromocaoDAO.m in Sources */,
+				9C6516C415FBC98900EAF22D /* ZPCoreLocationController.m in Sources */,
+				9C6516C915FBF3F700EAF22D /* ZPZapeatUtil.m in Sources */,
+				9C6516CC15FBF52100EAF22D /* ZPControleDAO.m in Sources */,
+				9C6516D115FBF89B00EAF22D /* ZPUsuarioService.m in Sources */,
+				9C6516D415FBF8DC00EAF22D /* ZPPromocaoService.m in Sources */,
+				9C6516D715FBFA5000EAF22D /* ZPControleService.m in Sources */,
 				9CC72114167E6A8A002CB839 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "ZPAppDelegate.h"
 
-@implementation AppDelegate
+@implementation ZPAppDelegate
 
 @synthesize  databaseName,databasePath;
 

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@interface Usuario : NSObject
+@interface ZPUsuario : NSObject
 
 @property(nonatomic) long codigo;
 @property(nonatomic,strong) NSString *login;
@@ -15,7 +15,7 @@
 @property(nonatomic,strong) NSString *token;
 @property(nonatomic,strong) NSMutableArray *promocoes;
 
-+ (Usuario *) init : (NSDictionary *) dicionario;
++ (ZPUsuario *) init : (NSDictionary *) dicionario;
 
 
 @end

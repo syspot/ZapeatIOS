@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "CoreLocationController.h"
+#import "ZPCoreLocationController.h"
 
-@implementation CoreLocationController
+@implementation ZPCoreLocationController
 
 @synthesize locMgr, delegate;
 

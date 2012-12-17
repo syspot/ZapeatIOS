@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SemConexaoController : UIViewController
+@interface ZPSemConexaoController : UIViewController
 
 @property(nonatomic,strong) UITextField *login;
 @property(nonatomic,strong) UITextField *senha;

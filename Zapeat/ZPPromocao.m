@@ -6,15 +6,15 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "Promocao.h"
+#import "ZPPromocao.h"
 #import <CoreLocation/CLLocation.h>
-@implementation Promocao
+@implementation ZPPromocao
 
 @synthesize descricao,latitude,localidade,longitude,precoOriginal,precoPromocional,codigo,notificada,inicio,fim;
 
-+(Promocao *) init :(NSDictionary *) dicionario {
++(ZPPromocao *) init :(NSDictionary *) dicionario {
     
-    Promocao * promocao = [[Promocao alloc] init];
+    ZPPromocao * promocao = [[ZPPromocao alloc] init];
     
     [promocao setDescricao:        [dicionario objectForKey:@"descricao"]];
     [promocao setPrecoOriginal:    [dicionario objectForKey:@"precoOriginal"]];

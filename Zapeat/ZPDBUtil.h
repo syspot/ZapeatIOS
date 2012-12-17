@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"
 
-@interface DBUtil : NSObject
+@interface ZPDBUtil : NSObject
 
 +(FMDatabase *) getConnection;
 

@@ -6,36 +6,36 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "PromocaoService.h"
-#import "Promocao.h"
-#import "PromocaoDAO.h"
-@implementation PromocaoService
+#import "ZPPromocaoService.h"
+#import "ZPPromocao.h"
+#import "ZPPromocaoDAO.h"
+@implementation ZPPromocaoService
 
 -(void) clean {
     
-    PromocaoDAO  *dao = [[PromocaoDAO alloc]init];
+    ZPPromocaoDAO  *dao = [[ZPPromocaoDAO alloc]init];
     [dao clean];
     [dao release];
 }
 
 -(void) inserir :(NSMutableArray *) promocoes {
-    PromocaoDAO  *dao = [[PromocaoDAO alloc]init];
+    ZPPromocaoDAO  *dao = [[ZPPromocaoDAO alloc]init];
     [dao inserir:promocoes];
     [dao release];
 }
 
 -(NSMutableArray *) getPromocoes {
     
-    PromocaoDAO  *dao = [[PromocaoDAO alloc]init];
+    ZPPromocaoDAO  *dao = [[ZPPromocaoDAO alloc]init];
     NSMutableArray *promocoes = [dao getPromocoes];
     [dao release];
     return promocoes;
     
 }
 
--(void) markAsNotified:(Promocao*) promocao {
+-(void) markAsNotified:(ZPPromocao*) promocao {
     
-    PromocaoDAO  *dao = [[PromocaoDAO alloc]init];
+    ZPPromocaoDAO  *dao = [[ZPPromocaoDAO alloc]init];
     [dao markAsNotified:promocao];
     [dao release];
     

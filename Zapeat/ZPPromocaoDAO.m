@@ -6,23 +6,23 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "PromocaoDAO.h"
-#import "Promocao.h"
-#import "DBUtil.h"
+#import "ZPPromocaoDAO.h"
+#import "ZPPromocao.h"
+#import "ZPDBUtil.h"
 #import "FMDatabase.h"
 
 
-@implementation PromocaoDAO
+@implementation ZPPromocaoDAO
 
 -(BOOL) inserir:(NSMutableArray *) promocoes {
     
     bool retorno = true;
     
-    FMDatabase *conexao = [DBUtil getConnection];
+    FMDatabase *conexao = [ZPDBUtil getConnection];
     
     [conexao beginTransaction];
     
-    for(Promocao *item in promocoes) {
+    for(ZPPromocao *item in promocoes) {
 
             retorno= [conexao executeUpdate:@"INSERT OR IGNORE INTO PROMOCOES(CODIGO,DESCRICAO,LOCALIDADE,LATITUDE,LONGITUDE,PRECO_ORIGINAL,PRECO_PROMOCIONAL,INICIO,FIM) VALUES(?,?,?,?,?,?,?,?,?);",[NSNumber numberWithLong:item.codigo],[NSString stringWithString:item.descricao],
                       [NSString stringWithString:item.localidade],[NSNumber numberWithDouble:item.latitude],
@@ -34,7 +34,7 @@
 
     [conexao commit];
     
-    [DBUtil closeConnection:conexao];
+    [ZPDBUtil closeConnection:conexao];
 
     return retorno;
     
@@ -44,13 +44,13 @@
     
     NSMutableArray *promocoes = [[NSMutableArray alloc]init];
     
-    FMDatabase *conexao = [DBUtil getConnection];
+    FMDatabase *conexao = [ZPDBUtil getConnection];
     
     FMResultSet *rs = [conexao executeQuery:@"SELECT * FROM promocoes where (inicio is null or strftime('%s','now') - strftime('%s',inicio) > 0) and (fim is null or  strftime('%s','now') - strftime('%s',fim) < 0) "];
     
     while([rs next]) {
         
-        Promocao *promocao = [[Promocao alloc]init];
+        ZPPromocao *promocao = [[ZPPromocao alloc]init];
         promocao.codigo = [rs longForColumn:@"codigo"];
         promocao.descricao = [rs stringForColumn:@"descricao"];
         promocao.localidade = [rs stringForColumn:@"localidade"];
@@ -68,25 +68,25 @@
         
     }
     
-    [DBUtil closeConnection:conexao];
+    [ZPDBUtil closeConnection:conexao];
     
     return promocoes;
     
 }
 
--(void) markAsNotified:(Promocao*) promocao {
+-(void) markAsNotified:(ZPPromocao*) promocao {
     
-    FMDatabase *conexao = [DBUtil getConnection];
+    FMDatabase *conexao = [ZPDBUtil getConnection];
         
     [conexao executeUpdate:@"UPDATE PROMOCOES SET NOTIFICADA = 1 WHERE CODIGO = ?;",[NSNumber numberWithLong:promocao.codigo]];
     
-    [DBUtil closeConnection:conexao];
+    [ZPDBUtil closeConnection:conexao];
     
 }
 
 -(void) clean {
    
-    FMDatabase *conexao = [DBUtil getConnection];
+    FMDatabase *conexao = [ZPDBUtil getConnection];
     
     [conexao beginTransaction];
     
@@ -94,7 +94,7 @@
     
     [conexao commit];
     
-    [DBUtil closeConnection:conexao];
+    [ZPDBUtil closeConnection:conexao];
     
 }
  

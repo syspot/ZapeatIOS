@@ -1,5 +1,5 @@
 //
-//  ControleService.h
+//  ControleDAO.h
 //  Zapeat
 //
 //  Created by Marcelo Magalhães on 08/09/12.
@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ControleService : NSObject
+@interface ZPControleDAO : NSObject
 
 -(void) clean;
 
 -(NSDate *) getUltimaDataAtualizacao;
 
--(void) updateDataATualizacao;
+-(void) updateDataAtualizacao;
 
 @end

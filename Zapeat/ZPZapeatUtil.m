@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "ZapeatUtil.h"
+#import "ZPZapeatUtil.h"
 #import <CommonCrypto/CommonDigest.h> 
 #import "Reachability.h"
-@implementation ZapeatUtil
+@implementation ZPZapeatUtil
 
 +(int) hourBetweenDates : (NSDate*) date1 and: (NSDate*) date2 {
     NSTimeInterval distanceBetweenDates = [date2 timeIntervalSinceDate:date1];

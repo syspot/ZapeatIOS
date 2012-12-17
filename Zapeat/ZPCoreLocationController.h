@@ -15,7 +15,7 @@
 - (void)locationError:(NSError *)error; // Any errors are sent here
 @end
 
-@interface CoreLocationController : NSObject <CLLocationManagerDelegate> {
+@interface ZPCoreLocationController : NSObject <CLLocationManagerDelegate> {
     
     CLLocationManager *locMgr;
 	id delegate;

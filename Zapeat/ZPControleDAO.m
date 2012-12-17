@@ -6,18 +6,18 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "ControleDAO.h"
+#import "ZPControleDAO.h"
 #import "FMDatabase.h"
-#import "DBUtil.h"
-@implementation ControleDAO
+#import "ZPDBUtil.h"
+@implementation ZPControleDAO
 
 -(void) clean{
     
-    FMDatabase *conexao = [DBUtil getConnection];
+    FMDatabase *conexao = [ZPDBUtil getConnection];
     
     [conexao executeUpdate:@"DELETE FROM CONTROLE;"];
     
-    [DBUtil closeConnection:conexao];
+    [ZPDBUtil closeConnection:conexao];
     
 }
 
@@ -27,7 +27,7 @@
     
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     
-    FMDatabase *conexao = [DBUtil getConnection];
+    FMDatabase *conexao = [ZPDBUtil getConnection];
     
     NSDate *date = nil;
     
@@ -49,7 +49,7 @@
     
     [dateFormatter release];
     
-    [DBUtil closeConnection:conexao];
+    [ZPDBUtil closeConnection:conexao];
     
     return date;
     
@@ -57,7 +57,7 @@
 
 -(void) updateDataAtualizacao {
     
-    FMDatabase *conexao = [DBUtil getConnection];
+    FMDatabase *conexao = [ZPDBUtil getConnection];
     
     NSDateFormatter *dateFormatter =    [[NSDateFormatter alloc] init];
 
@@ -77,7 +77,7 @@
         
     }
     
-    [DBUtil closeConnection:conexao];
+    [ZPDBUtil closeConnection:conexao];
     
 }
 

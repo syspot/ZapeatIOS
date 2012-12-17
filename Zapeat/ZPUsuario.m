@@ -6,15 +6,15 @@
 //  Copyright (c) 2012 TopSys. All rights reserved.
 //
 
-#import "Usuario.h"
-#import "Promocao.h"
-@implementation Usuario
+#import "ZPUsuario.h"
+#import "ZPPromocao.h"
+@implementation ZPUsuario
 
 @synthesize login,senha,promocoes,codigo,token;
 
-+ (Usuario *) init : (NSDictionary *) dicionario{
++ (ZPUsuario *) init : (NSDictionary *) dicionario{
     
-    Usuario * user = [[Usuario alloc]init];
+    ZPUsuario * user = [[ZPUsuario alloc]init];
     
     [user setCodigo:[[dicionario objectForKey:@"id"] longValue]];
     
@@ -26,7 +26,7 @@
 
     for(id item in itens) {
         
-        [promocoesDia addObject: [Promocao init:item]];
+        [promocoesDia addObject: [ZPPromocao init:item]];
 
     }
     

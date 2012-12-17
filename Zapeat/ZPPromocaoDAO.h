@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Promocao.h"
+#import "ZPPromocao.h"
 #import "FMResultSet.h"
-@interface PromocaoDAO : NSObject
+@interface ZPPromocaoDAO : NSObject
 
 -(BOOL) inserir:(NSMutableArray *) promocoes;
 
 -(NSMutableArray *) getPromocoes;
 
--(void) markAsNotified:(Promocao*) promocao;
+-(void) markAsNotified:(ZPPromocao*) promocao;
 
 -(void) clean;
 
